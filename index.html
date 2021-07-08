@@ -108,18 +108,18 @@ if(counter==(window.innerWidth/4*1).toFixed(0)){counter=0;};
                                 
              //x
             if(window.innerWidth/2-5+tiltLR*10<0){
-                                alert(vol.reduce(myFunc));
+                                alert(vol.reduceRight(myFunc));
                               
                                 };
              //y
             if(window.innerWidth/2-5+tiltFB*10<0){
-                                alert(vol.reduce(myFunc));
+                                alert(vol.reduceRight(myFunc));
                            
                                 };
                                 
              //xr
             if(window.innerWidth/2-5+tiltLR*10>window.innerWidth){
-                                alert(vol.reduce(myFunc));
+                                alert(vol.reduceRight(myFunc));
                               
                                 };
              //yb
@@ -132,10 +132,9 @@ if(counter==(window.innerWidth/4*1).toFixed(0)){counter=0;};
                                 
     }
 
-               function myFunc(total, num) {
+function myFunc(total, num) {
   return total - num;
 }                 
-                             
 
  </script>
  </body>
