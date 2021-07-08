@@ -18,8 +18,8 @@ body, html { width:100%; }
                      </style>
 
 <script>
-var vol = [];
-var voll = [];
+var prev = [];
+var now = [];
 var counter = 0;
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
@@ -92,26 +92,24 @@ if(counter==(window.innerWidth/4*1).toFixed(0)){counter=0;};
         ctxx.fillStyle = "black";
         ctxx.fillRect(window.innerWidth/2-5-tiltLR*20, window.innerWidth/2-5-tiltFB*20, 10, 10);
                                 
-                   
-     
-       
+    
                                 
              //x
             if(window.innerWidth/2-5+tiltLR*20<0){
-             alert(window.innerWidth/2-5-tiltLR*20);
+           //  alert(Math.abs(window.innerWidth/2-5-tiltLR*20));
             };
              //y
             if(window.innerWidth/2-5+tiltFB*20<0){
-               alert(window.innerWidth/2-5-tiltFB*20);
+             //  alert(Math.abs(window.innerWidth/2-5-tiltFB*20));
              };
                                 
              //xr
             if(window.innerWidth/2-5+tiltLR*20>window.innerWidth){
-                alert(window.innerWidth/2-5-tiltLR*20-window.innerWidth);
+              //  alert(window.innerWidth/2-5-tiltLR*20-window.innerWidth);
              };
              //yb
             if(window.innerWidth/2-5+tiltFB*20>window.innerWidth){
-                 alert(window.innerWidth/2-5-tiltFB*20-window.innerWidth);
+              //   alert(window.innerWidth/2-5-tiltFB*20-window.innerWidth);
              };
                                 
                                 
