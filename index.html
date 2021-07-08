@@ -45,8 +45,8 @@ function init() {
     if (window.DeviceOrientationEvent) {
         
         window.addEventListener('deviceorientation', function (eventData) {
-            var tiltLR = eventData.gamma;
-            var tiltFB = eventData.alpha;
+            var tiltLR = eventData.alpha;
+            var tiltFB = eventData.beta;
             var dir = eventData.alpha
             deviceOrientationHandler(tiltLR, tiltFB, dir);
         }, false);
