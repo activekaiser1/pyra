@@ -56,7 +56,7 @@ function init() {
     
         setInterval(function(){ counter++; 
 
-
+ctx.clearRect(0,0,window.innerWidth,window.innerWidth);
 ctx.beginPath();
 
 ctx.rect(1-counter/2, 1-counter/2, (window.innerWidth)-1+counter, (window.innerWidth)-1+counter);
@@ -89,11 +89,11 @@ if(counter==(window.innerWidth/4*1).toFixed(0)){counter=0;};
         ctxx.clearRect(0,0,window.innerWidth,window.innerHeight);
         ctxx.fillStyle = "black";
         ctxx.fillRect(window.innerWidth/2-5+tiltLR*15, window.innerWidth/2-5+tiltFB*15, 10, 10);
-           
+              if(window.innerWidth/2-5+tiltLR*15<1+window.innerWidth/8-counter/2){alert(10);};
     }
 
                                 
-                                if(window.innerWidth/2-5+tiltLR*15<1+window.innerWidth/8-counter/2){alert(10);};
+                             
 
  </script>
  </body>
