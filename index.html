@@ -45,7 +45,7 @@ function init() {
     if (window.DeviceOrientationEvent) {
         
         window.addEventListener('deviceorientation', function (eventData) {
-            var tiltLR = eventData.alpha;
+            var tiltLR = eventData.alpha+90;
             var tiltFB = eventData.beta;
             var dir = eventData.alpha
             deviceOrientationHandler(tiltLR, tiltFB, dir);
@@ -90,7 +90,7 @@ if(counter==(window.innerWidth/4*1).toFixed(0)){counter=0;};
       
         ctxx.clearRect(0,0,window.innerWidth,window.innerHeight);
         ctxx.fillStyle = "black";
-        ctxx.fillRect(window.innerWidth/2-5+tiltLR*10+window.innerWidth/2, window.innerWidth/2-5+tiltFB*10, 10, 10);
+        ctxx.fillRect(window.innerWidth/2-5+tiltLR*10, window.innerWidth/2-5+tiltFB*10, 10, 10);
                                 
                    
      
