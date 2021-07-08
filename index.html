@@ -18,6 +18,7 @@ body, html { width:100%; }
                      </style>
 
 <script>
+var vol = [];
 var voll = [];
 var counter = 0;
 var c = document.getElementById("myCanvas");
@@ -91,14 +92,49 @@ if(counter==(window.innerWidth/4*1).toFixed(0)){counter=0;};
         ctxx.fillStyle = "black";
         ctxx.fillRect(window.innerWidth/2-5+tiltLR*10, window.innerWidth/2-5+tiltFB*10, 10, 10);
                                 
-                     document.body.innerHTML += tiltLR;           
-              if((window.innerWidth/2-5+tiltLR*10).toFixed()==(1+window.innerWidth/8-counter/2).toFixed()){alert(10)};
+                   
+          voll.unshift(tiltLR);
+          vol[0]=voll[0];
+          vol[1]=voll[1];
+          vol[2]=voll[2];
+          vol[3]=voll[3];
+          vol[4]=voll[4];
+          vol[5]=voll[5];
+          vol[6]=voll[6];
+          vol[7]=voll[7];
+          vol[8]=voll[8];
+          vol[9]=voll[9];
+          vol[10]=voll[10];
+                                
+             //x
+            if(window.innerWidth/2-5+tiltLR*10<0){
+                                alert(vol.reduce(myFunc));
+                                voll.splice(0, arr.length)
+                                };
+             //y
+            if(window.innerWidth/2-5+tiltFB*10>0){
+                                alert(vol.reduce(myFunc));
+                                voll.splice(0, arr.length)
+                                };
+                                
+             //xr
+            if(window.innerWidth/2-5+tiltLR*10>window.innerWidth){
+                                alert(vol.reduce(myFunc));
+                                voll.splice(0, arr.length)
+                                };
+             //yb
+            if(window.innerWidth/2-5+tiltFB*10>window.innerWidth){
+                                voll.splice(0, arr.length)
+                                };
+                                
                                 
                                 
                                 
     }
 
-                                
+               function myFunc(total, num) {
+  return total - num;
+}                 
                              
 
  </script>
