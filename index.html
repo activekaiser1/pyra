@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
 <body>
+  
+  <audio id="yb" src="https://github.com/activekaiser1/ddrum/blob/main/Hard%20Kick.wav?raw=true" type="audio/wav">
+</audio>
+<audio id="xl" src="https://github.com/activekaiser1/ddrum/blob/main/LoyalteesigHi%20Hat.WAV?raw=true" type="audio/wav">
+</audio>
+<audio id="yt" src="https://github.com/activekaiser1/ddrum/blob/main/LoyalteesigSnare.wav?raw=true" type="audio/wav">
+</audio>
+  <audio id="xr" src="https://github.com/activekaiser1/ddrum/blob/main/Trap%20Crash.wav?raw=true" type="audio/wav">
+</audio>
 
 <canvas id="myCanvas"></canvas>
 <canvas id="myCanva""></canvas>
@@ -97,19 +106,33 @@ if(counter==(window.innerWidth/4*1).toFixed(0)){counter=0;};
              //x
             if(window.innerWidth/2-5+tiltLR*20<0){
            //  alert(Math.abs(window.innerWidth/2-5-tiltLR*20));
+            document.getElementById("yb").play();
+            document.getElementById("yb") = (Math.abs(window.innerWidth/2-5-tiltLR*20))/100;
+                                
             };
              //y
             if(window.innerWidth/2-5+tiltFB*20<0){
              //  alert(Math.abs(window.innerWidth/2-5-tiltFB*20));
+                                        
+                                         document.getElementById("xl").play();
+            document.getElementById("xl") = (Math.abs(window.innerWidth/2-5-tiltFB*20))/100;
+                                        
              };
                                 
              //xr
             if(window.innerWidth/2-5+tiltLR*20>window.innerWidth){
               //  alert(window.innerWidth/2-5-tiltLR*20-window.innerWidth);
+                                        
+                                                document.getElementById("yt").play();
+            document.getElementById("yt") = (window.innerWidth/2-5-tiltLR*20-window.innerWidth)/100;
+                                        
              };
              //yb
             if(window.innerWidth/2-5+tiltFB*20>window.innerWidth){
               //   alert(window.innerWidth/2-5-tiltFB*20-window.innerWidth);
+                                         document.getElementById("xr").play();
+            document.getElementById("xr") = (window.innerWidth/2-5-tiltFB*20-window.innerWidth)/100;
+                                        
              };
                                 
                                 
