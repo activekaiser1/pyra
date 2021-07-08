@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas"></canvas>
+<canvas id="myCanva""></canvas>
+<style>
+                     * { margin: 0; padding: 0;}
+
+body, html { width:100%; }
+
+#myCanvas {
+    width:100%;
+}
+      #myCanva {
+    width:100%;
+}
+                     </style>
+
+<script>
+var counter = 0;
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+c.width = window.innerWidth;
+c.height = window.innerWidth;
+c.style.position = "absolute";
+c.style.top = window.innerHeight/2 - window.innerWidth/2 + "px";
+var cc = document.getElementById("myCanva");
+var ctxx = cc.getContext("2d");
+cc.width = window.innerWidth;
+cc.height = window.innerWidth;
+cc.style.position = "absolute";
+cc.style.top = window.innerHeight/2 - window.innerWidth/2 + "px";
+
+ document.ontouchmove = function(event){
+    event.preventDefault();
+ };
+
+
+init();
+
+function init() {
+    if (window.DeviceOrientationEvent) {
+        
+        window.addEventListener('deviceorientation', function (eventData) {
+            var tiltLR = eventData.gamma;
+            var tiltFB = eventData.beta;
+            var dir = eventData.alpha
+            deviceOrientationHandler(tiltLR, tiltFB, dir);
+        }, false);
+    } 
+}
+        
+        
+        
+    
+        setInterval(function(){ counter++; 
+
+
+ctx.beginPath();
+
+ctx.rect(1-counter/2, 1-counter/2, (window.innerWidth)-1+counter, (window.innerWidth)-1+counter);
+
+
+ctx.rect(1+window.innerWidth/8-counter/2, 1+window.innerWidth/8-counter/2, window.innerWidth-window.innerWidth/4-1+counter, window.innerWidth-window.innerWidth/4-1+counter);
+
+ctx.rect(1+window.innerWidth/8*2-counter/2, 1+window.innerWidth/8*2-counter/2, window.innerWidth-window.innerWidth/4*2-1+counter, window.innerWidth-window.innerWidth/4*2-1+counter);
+
+ctx.rect(1+window.innerWidth/8*3-counter/2, 1+window.innerWidth/8*3-counter/2, window.innerWidth-window.innerWidth/4*3-1+counter, window.innerWidth-window.innerWidth/4*3-1+counter);
+
+
+ctx.rect(window.innerWidth/2-counter/2, window.innerWidth/2-counter/2, counter, counter);
+
+
+    
+ctx.lineWidth = 2;
+ctx.stroke();
+
+if(counter==(window.innerWidth/4*1).toFixed(0)){counter=0;};
+
+}, 30);
+        
+        
+        
+        
+
+   function deviceOrientationHandler(tiltLR, tiltFB, dir) {
+      
+        ctxx.clearRect(0,0,window.innerWidth,window.innerHeight);
+        ctxx.fillStyle = "black";
+        ctxx.fillRect(window.innerWidth/2+tiltLR*15, window.innerWidth/2+tiltFB*15, 10, 10);
+           
+    }
+
+
+ </script>
+ </body>
+</html>
