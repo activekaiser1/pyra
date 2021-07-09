@@ -29,6 +29,7 @@ body, html { width:100%; }
 <script>
 var feel = ["white","white","white","white","white"];
 var counter = 0;
+var counterr = 0;
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 c.width = window.innerWidth;
@@ -42,6 +43,11 @@ cc.height = window.innerWidth;
 cc.style.position = "absolute";
 cc.style.top = window.innerHeight/2 - window.innerWidth/2 + "px";
 
+ function doouble() {
+
+duuble = 10;
+};                                                               
+                                                                
  document.ontouchmove = function(event){
     event.preventDefault();
  };
@@ -100,6 +106,23 @@ if(counter==(window.innerWidth/3).toFixed(0)){
                                                                
                                                                 feel.unshift("white");
                                                                                 
+                                                                                    
+                                                                                 counterr++;                                                   feel.unshift("white");
+                                                                                
+                                                                                     if(duuble==10&&counterr==4){ 
+     
+      feel.shift(); feel.shift(); feel.shift(); feel.shift();  feel.unshift("white");feel.unshift("white");feel.unshift("white");feel.unshift("white");feel.unshift("white");
+      
+     
+        alert(feel);
+     
+                                                                  
+              
+                                                                               
+   
+                                duuble = 0;                                                         };   
+                                                                                    
+                                                                                    
                                                                                     
                                                                                     if(feel[4]=="red" || feel[4]=="blue" || feel[4]=="green" || feel[4]=="grey")
                                                                                     {feel[0]=feel[4]
