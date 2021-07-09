@@ -102,11 +102,23 @@ if(counter==(window.innerWidth/3).toFixed(0)){
                                                                                 
                                                                                     
                                                                                     if(feel[4]=="red" || feel[4]=="blue" || feel[4]=="green" || feel[4]=="grey")
-                                                                                    {feel[0]=feel[4]};
+                                                                                    {feel[0]=feel[4]
+                                                                                    
+                                                                                      if(feel[4]=="grey"){
+                            alert(10);
+                       document.getElementById("yt").volume = 1;
+                       document.getElementById("yt").play();};  
+                                                                                    
+                                                                                    };
                                                                                     
                                                                                     
                                                                 counter=0;};
                                                                 
+                                                            
+                                                              
+                                                            
+                                                            
+                                                            
                                                             
                                                                 
 
@@ -166,10 +178,7 @@ if(counter==(window.innerWidth/3).toFixed(0)){
                                 
     }
 
-          if(feel[0]=="grey"){
-                            alert(10);
-                       document.getElementById("yt").volume = 1;
-                       document.getElementById("yt").play();};     
+         
 
  </script>
  </body>
