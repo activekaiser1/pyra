@@ -28,6 +28,7 @@ body, html { width:100%; }
 
 <script>
 var feel = ["white","white","white","white"];
+var setra = "";
 var duuble = 0;
 var counter = 0;
 var counterr = 0;
@@ -106,43 +107,46 @@ ctx.stroke();
 if(counter==(window.innerWidth/3).toFixed(0)){
                                                                
                                                         counterr++;                                                                                     
-                                                                                
+                                                                        feel.unshift("white");                     
                               
                                                                                                                                           if(duuble==10&&counterr==4){ 
     
    
-//feel.unshift("white");feel.unshift("white");feel.unshift("white");feel.unshift("white");feel.unshift("white");
- 
+var i;
+for (i = 0; i < 5; i++) {
+                                                                                            
+     setra += feel[0] + "," + feel[1] + "," + feel[2] + "," + feel[3] + "," + feel[4]                                                                                          };
+ };
      
-alert(feel);
+alert(setra);
                                                                                                                 counterr = 0;
 duuble = 0;
 };
                                                                                     
                                                                                     
                                                                                     
-                                                                                    if(feel[3]=="red" || feel[3]=="blue" || feel[3]=="green" || feel[3]=="grey")
-                                                                                    {feel[0]=feel[3]
+                                                                                    if(feel[4]=="red" || feel[4]=="blue" || feel[4]=="green" || feel[4]=="grey")
+                                                                                    {feel[0]=feel[4]
                                                                                     
-                                                      if(feel[3]=="red"){
+                                                      if(feel[4]=="red"){
                        document.getElementById("yb").volume = 1;
                        document.getElementById("yb").play();};  
                                                    
-                                                       if(feel[3]=="blue"){
+                                                       if(feel[4]=="blue"){
                        document.getElementById("xxh").volume = 1;
                        document.getElementById("xxh").play();};  
                                                    
-                                                       if(feel[3]=="green"){
+                                                       if(feel[4]=="green"){
                        document.getElementById("yt").volume = 1;
                        document.getElementById("yt").play();};  
                                                    
-                                                       if(feel[3]=="grey"){
+                                                       if(feel[4]=="grey"){
                        document.getElementById("xr").volume = 1;
                        document.getElementById("xr").play();};  
                                                                                     
                                                                                     };
                                                                                     
-                                                                                    feel.unshift("white");             
+                                                                              
                                                                 counter=0;};
                                                                 
                                                             
