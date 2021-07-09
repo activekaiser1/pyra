@@ -111,23 +111,9 @@ if(counter==(window.innerWidth/4*1).toFixed(0)){counter=0;};
             if(window.innerWidth/2-5-tiltLR*20<0){
   document.getElementById("yb").play();
                               
-                              
-                              var i;
-for (i = 0; i < 3; i++) {
-                              
-                          
-                            maaxx =  Math.max.apply(Math, now);
-                            miinn = Math.min.apply(Math, now)
-                              
-                              
-                             tut[i] = ((now[i]-miinn)/maaxx)*1.5
-                              vallium = tut[0]+tut[1]+tut[2];
-                              
-                              };
-                              
+
            //document.getElementById("yb").volume = (Math.abs(window.innerWidth/2-5-tiltLR*20))/100;
-                                       
-                alert("yul" + vallium);                       
+                                
                                 
             };
           
@@ -144,8 +130,25 @@ for (i = 0; i < 3; i++) {
          
             if(window.innerWidth/2-5-tiltLR*20>window.innerWidth){
              
-                                         document.getElementById("yt").play();
-         document.getElementById("yt").volume = (window.innerWidth/2-5-tiltLR*20-window.innerWidth)/100;
+                                        // document.getElementById("yt").play();
+         //document.getElementById("yt").volume = (window.innerWidth/2-5-tiltLR*20-window.innerWidth)/100;
+                                     
+                                      var i;
+for (i = 0; i < 3; i++) {
+                              
+                          
+                            maaxx =  Math.max.apply(Math, now);
+                            miinn = Math.min.apply(Math, now)
+                              
+                              
+                             tut[i] = ((now[i]-miinn)/maaxx)*1.5
+                              vallium = tut[0]+tut[1]+tut[2];
+                              
+                              };
+                              
+         
+                                       
+                alert("yul" + vallium);                
                                         
              };
             
