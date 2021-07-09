@@ -106,14 +106,15 @@ if(counter==(window.innerWidth/4*1).toFixed(0)){counter=0;};
           
             if(window.innerWidth/2-5-tiltLR*20<0){
   document.getElementById("yb").play();
-           
+           document.getElementById("yb").volume = (Math.abs(window.innerWidth/2-5-tiltLR*20))/1000;
                                 
             };
           
             if(window.innerWidth/2-5-tiltFB*20<0){
           
                                        document.getElementById("xxh").play();
-           
+           document.getElementById("xxh").volume = (Math.abs(window.innerWidth/2-5-tiltFB*20))/1000;
+                                        alert((Math.abs(window.innerWidth/2-5-tiltFB*20))/1000);
                                         
              };
                                 
@@ -121,13 +122,16 @@ if(counter==(window.innerWidth/4*1).toFixed(0)){counter=0;};
             if(window.innerWidth/2-5-tiltLR*20>window.innerWidth){
              
                                          document.getElementById("yt").play();
-         
+         document.getElementById("yt").volume = (window.innerWidth/2-5-tiltLR*20-window.innerWidth)/1000;
                                         
              };
             
             if(window.innerWidth/2-5-tiltFB*20>window.innerWidth){
              
                                     document.getElementById("xr").play();
+                                                                 document.getElementById("xr").volume = (window.innerWidth/2-5-tiltFB*20-window.innerWidth)/1000;
+                                                                                             
+                                                                                             
           
                                         
              };
