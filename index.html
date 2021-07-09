@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-  
+  <button onclick="doouble()">Click me</button>
   <audio id="yb" src="https://github.com/activekaiser1/ddrum/blob/main/Calm%20Club%20808.wav?raw=true" type="audio/wav">
 </audio>
 <audio id="xxh" src="https://github.com/activekaiser1/ddrum/blob/main/LoyalteesigHi%20Hat.WAV?raw=true" type="audio/wav">
@@ -29,6 +29,7 @@ body, html { width:100%; }
 <script>
 var feel = ["white","white","white","white","white"];
 var counter = 0;
+var counterr = 0;
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 c.width = window.innerWidth;
@@ -42,6 +43,11 @@ cc.height = window.innerWidth;
 cc.style.position = "absolute";
 cc.style.top = window.innerHeight/2 - window.innerWidth/2 + "px";
 
+   function doouble() {
+
+duuble = 10;
+};                                                             
+                                                                
  document.ontouchmove = function(event){
     event.preventDefault();
  };
@@ -97,9 +103,22 @@ ctx.stroke();
 
 
 if(counter==(window.innerWidth/3).toFixed(0)){
-                                                               
+                                                                counterr++; 
                                                                 feel.unshift("white");
                                                                                 
+                                                                                    
+                                                                                        if(duuble==10&&counterr==4){ 
+     
+      feel.shift(); feel.shift(); feel.shift(); feel.shift();  feel.unshift("white");feel.unshift("white");feel.unshift("white");feel.unshift("white");feel.unshift("white");
+      
+     
+        alert(feel);
+     
+                                      
+   
+                                duuble = 0;                                                         };
+                                                                                    
+                                                                                    
                                                                                     
                                                                                     if(feel[4]=="red" || feel[4]=="blue" || feel[4]=="green" || feel[4]=="grey")
                                                                                     {feel[0]=feel[4]
