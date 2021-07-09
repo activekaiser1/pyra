@@ -104,10 +104,21 @@ if(counter==(window.innerWidth/3).toFixed(0)){
                                                                                     if(feel[4]=="red" || feel[4]=="blue" || feel[4]=="green" || feel[4]=="grey")
                                                                                     {feel[0]=feel[4]
                                                                                     
-                                                                                      if(feel[4]=="grey"){
-                            alert(10);
+                                                      if(feel[4]=="red"){
+                       document.getElementById("yb").volume = 1;
+                       document.getElementById("yb").play();};  
+                                                   
+                                                       if(feel[4]=="blue"){
+                       document.getElementById("xxh").volume = 1;
+                       document.getElementById("xxh").play();};  
+                                                   
+                                                       if(feel[4]=="green"){
                        document.getElementById("yt").volume = 1;
                        document.getElementById("yt").play();};  
+                                                   
+                                                       if(feel[4]=="grey"){
+                       document.getElementById("xr").volume = 1;
+                       document.getElementById("xr").play();};  
                                                                                     
                                                                                     };
                                                                                     
