@@ -76,27 +76,22 @@ ctx.stroke();
                                                                
 
 ctx.beginPath();
-ctx.rect(1+window.innerWidth/8-counter/2, 1+window.innerWidth/8-counter/2, window.innerWidth-window.innerWidth/4-1+counter, window.innerWidth-window.innerWidth/4-1+counter);
+ctx.rect(1+window.innerWidth/6,1+window.innerWidth/6,window.innerWidth-window.innerWidth/3,window.innerWidth-window.innerWidth/3);
 ctx.fillStyle = feel[1];
 ctx.fill();
 ctx.stroke();
 
                                                                 
 ctx.beginPath();                                                                
-ctx.rect(1+window.innerWidth/8*2-counter/2, 1+window.innerWidth/8*2-counter/2, window.innerWidth-window.innerWidth/4*2-1+counter, window.innerWidth-window.innerWidth/4*2-1+counter);
+ctx.rect(1+window.innerWidth/3,1+window.innerWidth/3,window.innerWidth-window.innerWidth/1.5,window.innerWidth-window.innerWidth/1.5);
 ctx.fillStyle = feel[2];
 ctx.fill();
 ctx.stroke();
 
-ctx.beginPath();                                                                
-ctx.rect(1+window.innerWidth/8*3-counter/2, 1+window.innerWidth/8*3-counter/2, window.innerWidth-window.innerWidth/4*3-1+counter, window.innerWidth-window.innerWidth/4*3-1+counter);
-ctx.fillStyle = feel[3];
-ctx.fill();
-ctx.stroke();
 
 ctx.beginPath();
 ctx.rect(window.innerWidth/2-counter/2, window.innerWidth/2-counter/2, counter, counter);
-ctx.fillStyle = feel[4];
+ctx.fillStyle = feel[3];
 ctx.fill();
 ctx.stroke();
 
@@ -106,8 +101,8 @@ if(counter==(window.innerWidth/4*1).toFixed(0)){
                                                                 feel.unshift("white");
                                                                                 
                                                                                     
-                                                                                    if(feel[5]=="red" || feel[5]=="blue" || feel[5]=="green" || feel[5]=="grey")
-                                                                                    {feel[0]=feel[5]};
+                                                                                    if(feel[4]=="red" || feel[4]=="blue" || feel[4]=="green" || feel[4]=="grey")
+                                                                                    {feel[0]=feel[4]};
                                                                                     
                                                                                     
                                                                 counter=0;};
