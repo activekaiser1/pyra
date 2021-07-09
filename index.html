@@ -28,6 +28,7 @@ body, html { width:100%; }
 
 <script>
 var feel = ["white","white","white","white","white"];
+var duuble = 0;
 var counter = 0;
 var counterr = 0;
 var c = document.getElementById("myCanvas");
@@ -104,11 +105,10 @@ ctx.stroke();
 
 if(counter==(window.innerWidth/3).toFixed(0)){
                                                                
-                                                            feel.unshift("white");
-                                                                                    
-                                                                                 counterr++;                                                   
+                                                        counterr++;                                                   feel.unshift("white");                                               
                                                                                 
-                                                                                   if(duuble==10){ 
+                              
+                                                                                                                                          if(duuble==10&&counterr==4){ 
      
       feel.shift(); feel.shift(); feel.shift(); feel.shift();  feel.unshift("white");feel.unshift("white");feel.unshift("white");feel.unshift("white");feel.unshift("white");
       
