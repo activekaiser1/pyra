@@ -30,7 +30,7 @@ body, html { width:100%; }
 var fell = ["white","white","white","white","white","white","white","white","white","white","white","white","white","white"];                     
 var feel = ["white","white","white","white"];
 var gud = 0;
-var setra = "";
+var setra = [];
 var duuble = 0;
 var counter = 0;
 var counterr = 0;
@@ -48,8 +48,8 @@ cc.style.position = "absolute";
 cc.style.top = window.innerHeight/2 - window.innerWidth/2 + "px";
 
  function doouble() {
-
-duuble = 10;
+gud = 10;
+//duuble = 10;
 };                                                               
                                                                 
  document.ontouchmove = function(event){
@@ -172,7 +172,7 @@ if(counter==(window.innerWidth/3).toFixed(0)){
                                                                         feel.unshift("white");                     
                               
                                                                                                                                           if(duuble==10&&counterr==4){ 
-     setra += feel[1] + "," + feel[2] + "," + feel[3] + "," + feel[4];                                                                                     
+     setra.push(feel[1]); setra.push(feel[2]); setra.push(feel[3]); setra.push(feel[4]);                                                                                   
 
 alert(setra);
                                                                                             
