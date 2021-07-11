@@ -238,7 +238,8 @@ if(fell[47] == "green"){fell[11]="green"};
         
 
    function deviceOrientationHandler(tiltLR, tiltFB, dir) {
-      
+      alert(tiltLR);
+                                                   document.write(tiltLR);
         ctxx.clearRect(0,0,window.innerWidth,window.innerHeight);
         ctxx.fillStyle = "black";
         ctxx.fillRect(window.innerWidth/2-5-tiltLR*20, window.innerWidth/2-5-tiltFB*20, 10, 10);
