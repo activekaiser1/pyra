@@ -110,7 +110,7 @@ ctx.stroke();
  if(gud==10) {                                                               
   var i;
 for (i = 0; i < 12; i++) {
-ctx.fillStyle= "blue";
+ctx.fillStyle=fell[i];
 ctx.beginPath();
 ctx.moveTo(window.innerWidth/2, window.innerWidth/2);
 ctx.lineTo(((1-counter/2)+((window.innerWidth+counter)/12)*i), (window.innerWidth)+counter/2);
@@ -122,7 +122,7 @@ ctx.fill();
 
 var i;
 for (i = 0; i < 12; i++) {
-ctx.fillStyle="green";
+ctx.fillStyle=fell[i];
 ctx.beginPath();
 ctx.moveTo(window.innerWidth/2, window.innerWidth/2);
 ctx.lineTo(((1+window.innerWidth/6-counter/2)+((window.innerWidth-window.innerWidth/3+counter)/12)*i), (window.innerWidth-window.innerWidth/6)+counter/2);
@@ -134,7 +134,7 @@ ctx.fill();
 
 var i;
 for (i = 0; i < 12; i++) {
-ctx.fillStyle= fell[i];
+ctx.fillStyle=fell[i];
 ctx.beginPath();
 ctx.moveTo(window.innerWidth/2, window.innerWidth/2);
 ctx.lineTo(((1+window.innerWidth/3-counter/2)+((window.innerWidth-window.innerWidth/1.5+counter)/12)*i), (window.innerWidth-window.innerWidth/3)+counter/2);
@@ -146,7 +146,7 @@ ctx.fill();
 
 var i;
 for (i = 0; i < 12; i++) {
-ctx.fillStyle="grey";
+ctx.fillStyle=fell[i];
 ctx.beginPath();
 ctx.moveTo(window.innerWidth/2, window.innerWidth/2);
 ctx.lineTo(((1+window.innerWidth/2-counter/2)+((counter)/12)*i), window.innerWidth/2+counter/2);
@@ -168,19 +168,14 @@ ctx.fill();
                                                                 
 if(counter==(window.innerWidth/3).toFixed(0)){
                                                                
-                                                        counterr++;                                                                                     
-                                                                        feel.unshift("white");                     
+counterr++;                                                                                     
+feel.unshift("white");  
+fell.unshift("white"); fell.unshift("white"); fell.unshift("white"); fell.unshift("white"); fell.unshift("white"); fell.unshift("white"); fell.unshift("white"); fell.unshift("white"); fell.unshift("white"); fell.unshift("white"); fell.unshift("white"); fell.unshift("white");                    
                               
-                                                                                                                                          if(duuble==10&&counterr==4){ 
-     setra.push(feel[1]); setra.push(feel[2]); setra.push(feel[3]); setra.push(feel[4]);                                                                                   
-
+if(duuble==10&&counterr==4){ 
+setra.push(feel[1]); setra.push(feel[2]); setra.push(feel[3]); setra.push(feel[4]);                                                                                   
 alert(setra);
-                                                                                            
-                                                                                            
-   feel[0] = "white"; feel[1] = "white"; feel[2] = "white"; feel[3] = "white";  feel[4] = "white";
-                                                              
-    
-                                                                                                                counterr = 0;
+feel[0] = "white"; feel[1] = "white"; feel[2] = "white"; feel[3] = "white";  feel[4] = "white";
 duuble = 0;
 };
                                                                                     
