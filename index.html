@@ -273,7 +273,11 @@ feel[0]="grey";
                                 
        if(gud==10){
               
-if(window.innerWidth/2-5-tiltFB*20<0){
+if(window.innerWidth/2-5-tiltFB*20<window.innerWidth-window.innerWidth){
+              
+};
+    
+if(window.innerWidth/2-5-tiltLR*20<window.innerWidth-window.innerWidth){
 fell[0] = "white";
 fell[1] = "white";
 fell[2] = "white";
@@ -286,8 +290,8 @@ fell[8] = "white";
 fell[9] = "white";
 fell[10] = "white"; 
 fell[11] = "white";                  
-};
-         
+};              
+              
                      if(window.innerWidth/2-5-tiltLR*20>((window.innerWidth)/12)*0&&window.innerWidth/2-5-tiltLR*20<((window.innerWidth)/12)*1){
 fell[0] = "green";
 fell[1] = "white";
@@ -482,7 +486,7 @@ fell[11] = "green";
                     
               };
                   
-if(window.innerWidth/2-5-tiltFB*20>window.innerWidth){
+if(window.innerWidth/2-5-tiltLR*20>window.innerWidth){
 fell[0] = "white";
 fell[1] = "white";
 fell[2] = "white";
@@ -497,7 +501,9 @@ fell[10] = "white";
 fell[11] = "white";
 };  
                   
-                  
+if(window.innerWidth/2-5-tiltFB*20>window.innerWidth){
+
+};                    
               
               };                         
                                 
