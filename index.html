@@ -125,8 +125,8 @@ for (i = 12; i < 24; i++) {
 ctx.fillStyle=fell[i];
 ctx.beginPath();
 ctx.moveTo(window.innerWidth/2, window.innerWidth/2);
-ctx.lineTo(((1+window.innerWidth/6-counter/2)+((window.innerWidth-window.innerWidth/3+counter)/12)*i), (window.innerWidth-window.innerWidth/6)+counter/2);
-ctx.lineTo(((1+window.innerWidth/6-counter/2)+((window.innerWidth-window.innerWidth/3+counter)/12)*(i+1)), (window.innerWidth-window.innerWidth/6)+counter/2);
+ctx.lineTo(((1+window.innerWidth/6-counter/2)+((window.innerWidth-window.innerWidth/3+counter)/12)*(i-12)), (window.innerWidth-window.innerWidth/6)+counter/2);
+ctx.lineTo(((1+window.innerWidth/6-counter/2)+((window.innerWidth-window.innerWidth/3+counter)/12)*((i-12)+1)), (window.innerWidth-window.innerWidth/6)+counter/2);
 ctx.closePath();
 ctx.stroke();
 ctx.fill();
@@ -137,8 +137,8 @@ for (i = 24; i < 36; i++) {
 ctx.fillStyle=fell[i];
 ctx.beginPath();
 ctx.moveTo(window.innerWidth/2, window.innerWidth/2);
-ctx.lineTo(((1+window.innerWidth/3-counter/2)+((window.innerWidth-window.innerWidth/1.5+counter)/12)*i), (window.innerWidth-window.innerWidth/3)+counter/2);
-ctx.lineTo(((1+window.innerWidth/3-counter/2)+((window.innerWidth-window.innerWidth/1.5+counter)/12)*(i+1)), (window.innerWidth-window.innerWidth/3)+counter/2);
+ctx.lineTo(((1+window.innerWidth/3-counter/2)+((window.innerWidth-window.innerWidth/1.5+counter)/12)*(i-12)), (window.innerWidth-window.innerWidth/3)+counter/2);
+ctx.lineTo(((1+window.innerWidth/3-counter/2)+((window.innerWidth-window.innerWidth/1.5+counter)/12)*((i-12)+1)), (window.innerWidth-window.innerWidth/3)+counter/2);
 ctx.closePath();
 ctx.stroke();
 ctx.fill();
@@ -149,8 +149,8 @@ for (i = 36; i < 48; i++) {
 ctx.fillStyle=fell[i];
 ctx.beginPath();
 ctx.moveTo(window.innerWidth/2, window.innerWidth/2);
-ctx.lineTo(((1+window.innerWidth/2-counter/2)+((counter)/12)*i), window.innerWidth/2+counter/2);
-ctx.lineTo(((1+window.innerWidth/2-counter/2)+((counter)/12)*(i+1)), window.innerWidth/2+counter/2);
+ctx.lineTo(((1+window.innerWidth/2-counter/2)+((counter)/12)*(i-12)), window.innerWidth/2+counter/2);
+ctx.lineTo(((1+window.innerWidth/2-counter/2)+((counter)/12)*((i-12)+1)), window.innerWidth/2+counter/2);
 ctx.closePath();
 ctx.stroke();
 ctx.fill();
