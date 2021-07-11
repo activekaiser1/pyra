@@ -34,6 +34,7 @@ var setra = [];
 var duuble = 0;
 var counter = 0;
 var counterr = 0;
+var countra = 0;
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 c.width = window.innerWidth;
@@ -48,7 +49,9 @@ cc.style.position = "absolute";
 cc.style.top = window.innerHeight/2 - window.innerWidth/2 + "px";
 
  function doouble() {
+countra++;
 gud = 10;
+                                                                if(countraa==2){countra=0;gud=0;};
 //duuble = 10;
 };                                                               
                                                                 
@@ -244,7 +247,7 @@ if(fell[47+12] == "green"){fell[11]=fell[47+12]};
         ctxx.fillRect(window.innerWidth/2-5-tiltLR*20, window.innerWidth/2-5-tiltFB*20, 10, 10);
                                 
     
-                                
+      if(gud==0){                                
           
             if(window.innerWidth/2-5-tiltLR*20<0){
 document.getElementById("yb").play();
@@ -293,7 +296,7 @@ feel[0]="white";
               
               
               
-              
+            };  
               
               
               
