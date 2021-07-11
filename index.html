@@ -78,11 +78,11 @@ function init() {
         
     
         setInterval(function(){ 
-                                                                counter++; 
+                                                           
                                                                 
                                                                 
   if(gud==0){                                
-        
+             counter++; 
 //ctx.clearRect(0,0,window.innerWidth,window.innerWidth);
 
 ctx.beginPath();
@@ -114,7 +114,8 @@ ctx.stroke();
 };
 
                                                                 
- if(gud==10) {                                                               
+ if(gud==10) {   
+                                                                     counter++; 
   var i;
 for (i = 0; i < 12; i++) {
 ctx.fillStyle=fell[i];
