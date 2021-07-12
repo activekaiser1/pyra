@@ -44,7 +44,7 @@ var counterr = 0;
 var countra = 0;
 var counttra = 0;
 var countttra = 0;
-                                          
+var countfour = 0;                                          
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 c.width = window.innerWidth;
@@ -203,15 +203,17 @@ feel.unshift("white");
 fell.unshift("white"); fell.unshift("white"); fell.unshift("white"); fell.unshift("white"); fell.unshift("white"); fell.unshift("white"); fell.unshift("white"); fell.unshift("white"); fell.unshift("white"); fell.unshift("white"); fell.unshift("white"); fell.unshift("white");                    
             
 if(duuble==8&&counterr==4){ 
+countfour++;
  setra.push(feel[1]); setra.push(feel[2]); setra.push(feel[3]);  setra.push(feel[4]);  
 alert(setra);
- feel[1] = "white"; feel[2] = "white"; feel[3] = "white"; feel[4] = "white";
+if(countfour==1){feel[1] = "white"; feel[2] = "white"; feel[3] = "white"; feel[4] = "white";};
 
+if(countfour==2){ feel[1] = setra[0]; feel[2] = setra[1]; feel[3] = setra[2]; feel[4] = setra[3]
+                                                                                           countfour=0;};
  
  };
                                                                            
-if(duuble==8){ feel[1] = setra[0+counterr]; feel[2] = setra[1+counterr]; feel[3] = setra[2+counterr]; feel[4] = setra[3+counterr];
-};                                                                           
+                                                                      
                                                                            if(counterr==4){
                                                                         counterr=0;
                                                                            };
