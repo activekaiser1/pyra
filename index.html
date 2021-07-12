@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <body>
-    <input type="number" id="bpm" value="140" min="0" max="280" style="z-index:1;position:absolute;">
-  <button onclick="doouble()" style="position:absolute;width:100px;height:100px;"></button>
+    <input type="number" id="bpm" value="140" min="0" max="280" style="z-index:1;position:absolute;width:50px;height:25px;">
+  <button onclick="doouble()" style="position:absolute;width:100px;height:100px;left:25px"></button>
+      <button onclick="steep()" style="position:absolute;width:100px;height:100px;left:50px"></button>
   <audio id="yb" src="https://github.com/activekaiser1/ddrum/blob/main/Calm%20Club%20808.wav?raw=true" type="audio/wav">
 </audio>
 <audio id="xxh" src="https://github.com/activekaiser1/ddrum/blob/main/LoyalteesigHi%20Hat.WAV?raw=true" type="audio/wav">
@@ -37,6 +38,8 @@ var counter = 0;
 var counterr = 0;
                                            var nom = 0;
                                            var countra = 0;
+                                           var counttra = 0;
+                                           var stepedit = 0;
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 c.width = window.innerWidth;
@@ -50,6 +53,15 @@ cc.height = window.innerWidth;
 cc.style.position = "absolute";
 cc.style.top = window.innerHeight/2 - window.innerWidth/2 + "px";
 
+                                                                function steep() {
+                                                                                                                               counttra++;
+stepedit = 10;
+
+     if(counttra==2){stepedit=0;counttra=0;};     
+                                                                
+                                                                };
+                                                                
+                                                                
  function doouble() {
                                                                 countra++;
 gud = 10;
@@ -250,7 +262,7 @@ if(fell[47+12] == nom){fell[11]=fell[47+12]};
         ctxx.fillStyle = "black";
         ctxx.fillRect(window.innerWidth/2-5-tiltLR*20, window.innerWidth/2-5-tiltFB*20, 10, 10);
                                 
-    
+         if(stepedit==10){  
                if(gud==0){                 
           
             if(window.innerWidth/2-5-tiltLR*20<0){
@@ -305,7 +317,7 @@ feel[0]="white";
               
               
               
-     };         
+     };};       
               
               
               
