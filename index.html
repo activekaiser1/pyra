@@ -2,8 +2,11 @@
 <html>
 <body>
     <input type="number" id="bpm" value="140" min="0" max="280" style="z-index:1;position:absolute;width:25px;height:25px;">
-  <button onclick="doouble()" style="position:absolute;width:100px;height:100px;left:25px"></button>
-      <button onclick="steep()" style="position:absolute;width:100px;height:100px;left:125px"></button>
+ 
+   <button onclick="steep()" style="position:absolute;width:100px;height:100px;left:25px">stepedit</button> 
+    <button onclick="keey()" style="position:absolute;width:100px;height:100px;left:125px">keyboard</button>
+    <button onclick="doouble()" style="position:absolute;width:100px;height:100px;left:25px">double</button>
+      
   <audio id="yb" src="https://github.com/activekaiser1/ddrum/blob/main/Calm%20Club%20808.wav?raw=true" type="audio/wav">
 </audio>
 <audio id="xxh" src="https://github.com/activekaiser1/ddrum/blob/main/LoyalteesigHi%20Hat.WAV?raw=true" type="audio/wav">
@@ -31,15 +34,17 @@ body, html { width:100%; }
 <script>
 var fell = ["white","white","white","white","white","white","white","white","white","white","white","white","white","white"];                       
 var feel = ["white","white","white","white"];
-var gud = 0;
 var setra = [];
+var stepedit = 0;
+var gud = 0;
 var duuble = 0;
+var nom = 0;
 var counter = 0;
 var counterr = 0;
-                                           var nom = 0;
-                                           var countra = 0;
-                                           var counttra = 0;
-                                           var stepedit = 0;
+var countra = 0;
+var counttra = 0;
+var countttra = 0;
+                                          
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 c.width = window.innerWidth;
@@ -53,22 +58,27 @@ cc.height = window.innerWidth;
 cc.style.position = "absolute";
 cc.style.top = window.innerHeight/2 - window.innerWidth/2 + "px";
 
-                                                                function steep() {
-                                                                                                                               counttra++;
+function steep() {
+countra++;
 stepedit = 10;
+if(countra==2){stepedit=0;countra=0;};     
+};
+                                                                
+                                                                
 
-     if(counttra==2){stepedit=0;counttra=0;};     
-                                                                
-                                                                };
-                                                                
-                                                                
- function doouble() {
-                                                                countra++;
+function keey() {
+counttra++;
 gud = 10;
-
-     if(countra==2){gud=0;countra=0;};                                                           
-                                                                //duuble = 10;
-};                                                               
+if(counttra==2){gud=0;counttra=0;};                                                           
+                                                            
+};   
+                                                                
+function doouble() {
+countttra++;                                                                
+duuble = 10;
+if(countttra==2){duuble=0;countttra=0;};                                                           
+};                                                                   
+                                                                
                                                                 
  document.ontouchmove = function(event){
     event.preventDefault();
@@ -195,7 +205,7 @@ if(duuble==10&&counterr==4){
 setra.push(feel[1]); setra.push(feel[2]); setra.push(feel[3]); setra.push(feel[4]);                                                                                   
 alert(setra);
 feel[0] = "white"; feel[1] = "white"; feel[2] = "white"; feel[3] = "white";  feel[4] = "white";
-duuble = 0;
+if(counteer==8){feel[0] = setra[0]; feel[1] = setra[1]; feel[2] = setra[2]; feel[3] = setra[3];  feel[4] = setra[4];};
 };
                                                                                     
                                                                                     
