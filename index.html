@@ -37,7 +37,7 @@ var feel = ["white","white","white","white"];
 var setra = [];
 var stepedit = 0;
 var gud = 0;
-var duuble = 0;
+var duuble = 4;
 var nom = 0;
 var counter = 0;
 var counterr = 0;
@@ -202,33 +202,7 @@ counterr++;
 feel.unshift("white");  
 fell.unshift("white"); fell.unshift("white"); fell.unshift("white"); fell.unshift("white"); fell.unshift("white"); fell.unshift("white"); fell.unshift("white"); fell.unshift("white"); fell.unshift("white"); fell.unshift("white"); fell.unshift("white"); fell.unshift("white");                    
             
-if(duuble==8&&counterr==4){ 
-countfour++;
- setra.push(feel[1]); setra.push(feel[2]); setra.push(feel[3]);  setra.push(feel[4]);  
-alert(setra);
-
-
-if(countfour==1){
-
-
-if(counterr==0){feel[1] = setra[0]; feel[2] = setra[1]; feel[3] = setra[2]; feel[4] = setra[3]};
-if(counterr==1){feel[1] = setra[1]; feel[2] = setra[2]; feel[3] = setra[3]; feel[4] = setra[4]};
-if(counterr==2){feel[1] = setra[2]; feel[2] = setra[3]; feel[3] = setra[4]; feel[4] = setra[5]};
-if(counterr==3){feel[1] = setra[3]; feel[2] = setra[4]; feel[3] = setra[5]; feel[4] = setra[6]};
-
-
-
-
-
-
-
-};
-
-if(countfour==2){ feel[1] = setra[0]; feel[2] = setra[1]; feel[3] = setra[2]; feel[4] = setra[3]
-                                                                                           countfour=0;};
- 
- };
-                                                                           
+                                                         
                                                                       
                                                                            if(counterr==4){
                                                                         counterr=0;
@@ -254,8 +228,8 @@ if(fell[47+12] == nom){fell[11]=fell[47+12]};
                                                                                     
                                                                                     
                                                                                     
-                                                                                    if(feel[4]=="red" || feel[4]=="blue" || feel[4]=="green" || feel[4]=="grey" || feel[4]=="white")
-                                                                                    {feel[0]=feel[4]
+                                                                                    if(feel[duuble]=="red" || feel[duuble]=="blue" || feel[duuble]=="green" || feel[duuble]=="grey" || feel[duuble]=="white")
+                                                                                    {feel[0]=feel[duuble]
                                                                                     
                                                       if(feel[4]=="red"){
                        document.getElementById("yb").volume = 1;
