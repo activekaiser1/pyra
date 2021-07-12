@@ -266,33 +266,42 @@ if(fell[47+12] == nom){fell[11]=fell[47+12]};
                if(gud==0){                 
           
             if(window.innerWidth/2-5-tiltLR*20<0){
+              if(window.innerWidth/2-5-tiltFB*20>0){                   
+                   if(window.innerWidth/2-5-tiltFB*20<window.innerWidth){               
 document.getElementById("yb").play();
 document.getElementById("yb").volume = (Math.abs(window.innerWidth/2-5-tiltLR*20))/100;
 feel[0]="red";
                nom = feel[0];
-};
+};};};
           
             if(window.innerWidth/2-5-tiltFB*20<0){
+              if(window.innerWidth/2-5-tiltLR*20>0){
+              if(window.innerWidth/2-5-tiltLR*20<window.innerWidth){
 document.getElementById("xxh").play();
 document.getElementById("xxh").volume = (Math.abs(window.innerWidth/2-5-tiltFB*20))/100;
 feel[0]="blue";
                 nom = feel[0];
-};
+};};};
                                 
          
             if(window.innerWidth/2-5-tiltLR*20>window.innerWidth){
+               if(window.innerWidth/2-5-tiltFB*20>0){                   
+                   if(window.innerWidth/2-5-tiltFB*20<window.innerWidth){    
+              
 document.getElementById("yt").play();
 document.getElementById("yt").volume = (window.innerWidth/2-5-tiltLR*20-window.innerWidth)/100;
 feel[0]="green";
                  nom = feel[0];
-};
+};};};
             
             if(window.innerWidth/2-5-tiltFB*20>window.innerWidth){
+                 if(window.innerWidth/2-5-tiltLR*20>0){
+              if(window.innerWidth/2-5-tiltLR*20<window.innerWidth){
 document.getElementById("xr").play();
 document.getElementById("xr").volume = (window.innerWidth/2-5-tiltFB*20-window.innerWidth)/100;
 feel[0]="grey";  
                 nom = feel[0];
-};
+};};};
              
               
               
