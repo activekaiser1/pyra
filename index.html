@@ -149,18 +149,19 @@ ctx.stroke();
 
                                                                 
  if(gud==10) {      
-                                                              
+   var ii;
+for (ii = 0; ii < 4; ii++) {                                                            
   var i;
 for (i = 0; i < 12; i++) {
 ctx.fillStyle=fell[i];
 ctx.beginPath();
 ctx.moveTo(window.innerWidth/2, window.innerWidth/2);
-ctx.lineTo(((1-counter/2)+((window.innerWidth+counter)/12)*i), (window.innerWidth)+counter/2);
-ctx.lineTo(((1-counter/2)+((window.innerWidth+counter)/12)*(i+1)), (window.innerWidth)+counter/2);
+ctx.lineTo(((1-counter/2)*ii+((window.innerWidth+counter)/12)*i), (window.innerWidth)+counter/2);
+ctx.lineTo(((1-counter/2)*ii+((window.innerWidth+counter)/12)*(i+1)), (window.innerWidth)+counter/2);
 ctx.closePath();
 ctx.stroke();
 ctx.fill();
-};
+}}:;
 
 
 };
