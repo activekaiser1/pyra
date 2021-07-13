@@ -45,7 +45,8 @@ var countra = 0;
 var counttra = 0;
 var countttra = 0;
 var countfour = 0;     
- var chud = 10;                                          
+ var chud = 10;  
+                                           var exped = 1;
                                            var total = 0;
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
@@ -75,6 +76,7 @@ if(countra==2){stepedit=0;countra=0;};
 function keey() {
 counttra++;
 gud = 10;
+                                                                xped = 2;
 if(counttra==2){gud=0;counttra=0;};                                                           
                                                             
 };   
@@ -279,7 +281,7 @@ if(fell[47+12] == nom){fell[11]=fell[47+12]};
                                                             
                                                                 
 
-}, (60000/document.getElementById('bpm').value)/window.innerWidth);
+}, ((60000/document.getElementById('bpm').value)/window.innerWidth)*exped         );
         
         
         
