@@ -37,7 +37,7 @@ var feel = ["white","white","white","white"];
 var setra = [];
 var stepedit = 0;
 var gud = 0;
-var duuble = 0;
+var duuble = 4;
 var nom = 0;
 var counter = 0;
 var counterr = 0;
@@ -80,8 +80,10 @@ if(counttra==2){gud=0;counttra=0;};
                                                                 
 function doouble() {
 countttra++;                                                                
-duuble = 4;
-if(countttra==2){duuble=0;countttra=0;};                                                           
+duuble = 8;
+if(countttra==2){duuble=16;};  
+if(countttra==3){duuble=32;};      
+if(countttra==3){duuble=4;countttra=0;};                                                                   
 };                                                                   
                                                                 
          
@@ -245,9 +247,9 @@ if(fell[47+12] == nom){fell[11]=fell[47+12]};
                                                         
                                                                        
                                                                                  
-                                                                                    if(feel[8]=="red" || feel[8]=="blue" || feel[8]=="green" || feel[8]=="grey" || feel[8]=="white")
+                                                                                    if(feel[duuble]=="red" || feel[duuble]=="blue" || feel[duuble]=="green" || feel[duuble]=="grey" || feel[duuble]=="white")
                                                                                     { 
-                                                                                    feel[0]=feel[8];
+                                                                                    feel[0]=feel[duuble];
                                                                                    
                                                                                     
                                                       if(feel[4]=="red"){
