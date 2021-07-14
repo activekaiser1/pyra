@@ -63,12 +63,13 @@ cc.style.top = window.innerHeight/2 - window.innerWidth/2 + "px";
                                                                 
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var source = [];
-
+var gainNode= [];
 var daya = ["https://archive.org/download/loyalteesigsnare/LoyalteesigSnare.wav","https://archive.org/download/loyalteesigsnare/LoyalteesigSnare.wav","https://archive.org/download/loyalteesigsnare/LoyalteesigSnare.wav","https://archive.org/download/loyalteesigsnare/LoyalteesigSnare.wav","https://archive.org/download/loyalteesigsnare/LoyalteesigSnare.wav","https://archive.org/download/loyalteesigsnare/LoyalteesigSnare.wav"];
             
             var i;
 for (i = 0; i < 4; i++) {
 source[i] = audioCtx.createBufferSource();
+gainNode[i] = audioCtx.createGain();
 };
 
 
@@ -85,7 +86,7 @@ function beel(url,i){
 
     audioCtx.decodeAudioData(audioData, function(buffer) {
         source[i].buffer = buffer;
-
+        source[i].connect(gainNode[i]);
         source[i].connect(audioCtx.destination);
        source[i].loop = false;
        
@@ -366,8 +367,9 @@ source[0].detune.value = 1200;
 
 feel[0]="red";
 nom = feel[0];
-source[0].start(0);             
-             
+source[0].start(0);   
+gainNode[0].gain.value = (Math.abs(window.innerWidth/2-5-tiltLR*20))/100;
+                        
 };};};
           
             if(window.innerWidth/2-5-tiltFB*20<0){
@@ -376,7 +378,8 @@ source[0].start(0);
 
 feel[0]="blue";
 nom = feel[0];
-source[1].start(0);              
+source[1].start(0); 
+gainNode[0].gain.value = (Math.abs(window.innerWidth/2-5-tiltFB*20))/100;               
               
 };};};
                                 
@@ -387,7 +390,8 @@ source[1].start(0);
               
 feel[0]="green";
 nom = feel[0];
-source[2].start(0);                
+source[2].start(0);
+gainNode[0].gain.value = (window.innerWidth/2-5-tiltLR*20-window.innerWidth)/100;                  
                
 };};};
             
@@ -398,6 +402,7 @@ source[2].start(0);
 feel[0]="grey";  
 nom = feel[0];
 source[3].start(0); 
+gainNode[0].gain.value = (window.innerWidth/2-5-tiltFB*20-window.innerWidth)/100;              
 
 };};};
              
