@@ -7,14 +7,6 @@
     <button onclick="keey()" style="position:absolute;width:100px;height:100px;left:125px">keyboard</button>
     <button onclick="doouble()" style="position:absolute;width:100px;height:100px;left:225px">double</button>
       
-  <audio id="yb" src="https://github.com/activekaiser1/ddrum/blob/main/Calm%20Club%20808.wav?raw=true" type="audio/wav">
-</audio>
-<audio id="xxh" src="https://github.com/activekaiser1/ddrum/blob/main/LoyalteesigHi%20Hat.WAV?raw=true" type="audio/wav">
-</audio>
-<audio id="yt" src="https://github.com/activekaiser1/ddrum/blob/main/LoyalteesigSnare.wav?raw=true" type="audio/wav">
-</audio>
-  <audio id="xr" src="https://github.com/activekaiser1/ddrum/blob/main/Trap%20Crash.wav?raw=true" type="audio/wav">
-</audio>
 
 <canvas id="myCanvas"></canvas>
 <canvas id="myCanva""></canvas>
@@ -64,8 +56,10 @@ cc.style.top = window.innerHeight/2 - window.innerWidth/2 + "px";
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 var source = [];
 var gainNode= [];
-var daya = ["https://archive.org/download/loyalteesigsnare/LoyalteesigSnare.wav","https://archive.org/download/loyalteesigsnare/LoyalteesigSnare.wav","https://archive.org/download/loyalteesigsnare/LoyalteesigSnare.wav","https://archive.org/download/loyalteesigsnare/LoyalteesigSnare.wav","https://archive.org/download/loyalteesigsnare/LoyalteesigSnare.wav","https://archive.org/download/loyalteesigsnare/LoyalteesigSnare.wav"];
-            
+var daya = ["https://archive.org/download/loyalteesigsnare/LoyalteesigSnare.wav",
+"https://archive.org/download/loyalteesig-hi-hat/LoyalteesigHi%20Hat.WAV",
+ "https://archive.org/download/trap-crash/Trap%20Crash.wav",
+"https://archive.org/download/calm-club-808/Calm%20Club%20808.wav"];
             var i;
 for (i = 0; i < 4; i++) {
 source[i] = audioCtx.createBufferSource();
@@ -379,7 +373,7 @@ gainNode[0].gain.value = (Math.abs(window.innerWidth/2-5-tiltLR*20))/100;
 feel[0]="blue";
 nom = feel[0];
 source[1].start(0); 
-gainNode[0].gain.value = (Math.abs(window.innerWidth/2-5-tiltFB*20))/100;               
+gainNode[1].gain.value = (Math.abs(window.innerWidth/2-5-tiltFB*20))/100;               
               
 };};};
                                 
@@ -391,7 +385,7 @@ gainNode[0].gain.value = (Math.abs(window.innerWidth/2-5-tiltFB*20))/100;
 feel[0]="green";
 nom = feel[0];
 source[2].start(0);
-gainNode[0].gain.value = (window.innerWidth/2-5-tiltLR*20-window.innerWidth)/100;                  
+gainNode[2].gain.value = (window.innerWidth/2-5-tiltLR*20-window.innerWidth)/100;                  
                
 };};};
             
@@ -402,7 +396,7 @@ gainNode[0].gain.value = (window.innerWidth/2-5-tiltLR*20-window.innerWidth)/100
 feel[0]="grey";  
 nom = feel[0];
 source[3].start(0); 
-gainNode[0].gain.value = (window.innerWidth/2-5-tiltFB*20-window.innerWidth)/100;              
+gainNode[3].gain.value = (window.innerWidth/2-5-tiltFB*20-window.innerWidth)/100;              
 
 };};};
              
