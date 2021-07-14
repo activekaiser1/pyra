@@ -61,7 +61,48 @@ cc.style.position = "absolute";
 cc.style.top = window.innerHeight/2 - window.innerWidth/2 + "px";
 
                                                                 
-                                                                
+var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+var source = [];
+
+var daya = ["https://archive.org/download/loyalteesigsnare/LoyalteesigSnare.wav","https://archive.org/download/loyalteesigsnare/LoyalteesigSnare.wav","https://archive.org/download/loyalteesigsnare/LoyalteesigSnare.wav","https://archive.org/download/loyalteesigsnare/LoyalteesigSnare.wav","https://archive.org/download/loyalteesigsnare/LoyalteesigSnare.wav","https://archive.org/download/loyalteesigsnare/LoyalteesigSnare.wav"];
+            
+            var i;
+for (i = 0; i < 4; i++) {
+source[i] = audioCtx.createBufferSource();
+};
+
+
+function beel(url,i){
+  var request = new XMLHttpRequest();
+   request.open('GET', url, true);
+
+ 
+
+  request.responseType = 'arraybuffer';
+
+  request.onload = function() {
+    var audioData = request.response;
+
+    audioCtx.decodeAudioData(audioData, function(buffer) {
+        source[i].buffer = buffer;
+
+        source[i].connect(audioCtx.destination);
+       source[i].loop = true;
+       
+      },
+
+      );
+
+  }
+
+  request.send();};
+  
+  
+  
+  var i;
+for (i = 0; i < 4; i++) {
+  beel(daya[i],i);
+  };
                                                                 
                                                                 
 function steep() {
@@ -253,20 +294,20 @@ if(fell[47+12] == nom){fell[11]=fell[47+12]};
                                                                                    
                                                                                     
                                                       if(feel[4]=="red"){
-                       document.getElementById("yb").volume = 1;
-                       document.getElementById("yb").play();};  
+                       source[0].start(0);
+                                                   };  
                                                    
                                                        if(feel[4]=="blue"){
-                       document.getElementById("xxh").volume = 1;
-                       document.getElementById("xxh").play();};  
+                        source[1].start(0);
+                                                    };  
                                                    
                                                        if(feel[4]=="green"){
-                       document.getElementById("yt").volume = 1;
-                       document.getElementById("yt").play();};  
+                      source[2].start(0);
+                                                   };  
                                                    
                                                        if(feel[4]=="grey"){
-                       document.getElementById("xr").volume = 1;
-                       document.getElementById("xr").play();};  
+                      source[3].start(0);
+                                                   };  
                                                                                     
                                                                                     };  
                                                                                     
