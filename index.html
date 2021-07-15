@@ -39,7 +39,7 @@ var counttra = 0;
 var countttra = 0;
    
 var pz = -1;
-                                        
+var xped = 1;                                        
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 c.width = window.innerWidth;
@@ -112,7 +112,7 @@ if(countra==2){stepedit=0;countra=0;};
 function keey() {
 counttra++;
 gud = 10;
-
+xped = 10;
 if(counttra==2){gud=0;counttra=0;};                                                           
                                                             
 };   
@@ -152,7 +152,7 @@ function init() {
         
         
     
-        setInterval(function(){ counter+=10; 
+        setInterval(function(){ counter+=xped; 
 
 ctx.clearRect(0,0,window.innerWidth,window.innerWidth);
 
