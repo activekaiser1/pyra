@@ -82,7 +82,7 @@ function beel(url,i){
         source[i].buffer = buffer;
         source[i].connect(gainNode[i]);
         source[i].connect(audioCtx.destination);
-       source[i].loop = false;
+       source[i].loop = true;
        
       },
 
