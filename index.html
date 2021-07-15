@@ -82,7 +82,7 @@ function beel(url,i){
     audioCtx.decodeAudioData(audioData, function(buffer) {
         source[i].buffer = buffer;
         source[i].connect(gainNode[i]);
-        source[i].connect(audioCtx.destination);
+        gainNode[i].connect(audioCtx.destination);
        source[i].loop = true;
        
       },
