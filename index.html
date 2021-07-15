@@ -39,7 +39,7 @@ var counttra = 0;
 var countttra = 0;
    
 var pz = -1;
-var xped = 1;                                        
+var xped = 5;                                        
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 c.width = window.innerWidth;
@@ -113,7 +113,7 @@ function keey() {
 counttra++;
 gud = 10;
 xped = 10;
-if(counttra==2){gud=0;counttra=0;};                                                           
+if(counttra==2){gud=0;counttra=0;xped=5};                                                           
                                                             
 };   
                                                                 
@@ -186,7 +186,7 @@ ctx.stroke();
 
                                                                 
  if(gud==10) {      
-                                                              
+ //y                                                             
   var i;
 for (i = 0; i < 12; i++) {
 ctx.fillStyle=fell[i];
@@ -235,6 +235,56 @@ ctx.stroke();
 ctx.fill();
 };
 
+//y                     
+  var i;
+for (i = 0; i < 12; i++) {
+ctx.fillStyle="white";
+ctx.beginPath();
+ctx.moveTo(window.innerWidth/2, window.innerWidth/2);
+ctx.lineTo(((1-counter/2)+((window.innerWidth+counter)/12)*i), -(window.innerWidth)+counter/2);
+ctx.lineTo(((1-counter/2)+((window.innerWidth+counter)/12)*(i+1)), -(window.innerWidth)+counter/2);
+ctx.closePath();
+ctx.stroke();
+ctx.fill();
+};
+
+var i;
+for (i = 12; i < 24; i++) {
+ctx.fillStyle="white";
+ctx.beginPath();
+ctx.moveTo(window.innerWidth/2, window.innerWidth/2);
+ctx.lineTo(((1+window.innerWidth/6-counter/2)+((window.innerWidth-window.innerWidth/3+counter)/12)*(i-12)), -(window.innerWidth-window.innerWidth/6)+counter/2);
+ctx.lineTo(((1+window.innerWidth/6-counter/2)+((window.innerWidth-window.innerWidth/3+counter)/12)*((i-12)+1)), -(window.innerWidth-window.innerWidth/6)+counter/2);
+ctx.closePath();
+ctx.stroke();
+ctx.fill();
+};
+
+var i;
+for (i = 24; i < 36; i++) {
+ctx.fillStyle="white";
+ctx.beginPath();
+ctx.moveTo(window.innerWidth/2, window.innerWidth/2);
+ctx.lineTo(((1+window.innerWidth/3-counter/2)+((window.innerWidth-window.innerWidth/1.5+counter)/12)*(i-24)), -(window.innerWidth-window.innerWidth/3)+counter/2);
+ctx.lineTo(((1+window.innerWidth/3-counter/2)+((window.innerWidth-window.innerWidth/1.5+counter)/12)*((i-24)+1)), -(window.innerWidth-window.innerWidth/3)+counter/2);
+ctx.closePath();
+ctx.stroke();
+ctx.fill();
+};
+
+var i;
+for (i = 36; i < 48; i++) {
+ctx.fillStyle="white";
+ctx.beginPath();
+ctx.moveTo(window.innerWidth/2, window.innerWidth/2);
+ctx.lineTo(((1+window.innerWidth/2-counter/2)+((counter)/12)*(i-36)), -window.innerWidth/2+counter/2);
+ctx.lineTo(((1+window.innerWidth/2-counter/2)+((counter)/12)*((i-36)+1)), -window.innerWidth/2+counter/2);
+ctx.closePath();
+ctx.stroke();
+ctx.fill();
+};
+                     
+                     
 };
 
 
