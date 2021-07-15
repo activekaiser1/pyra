@@ -124,10 +124,7 @@ countttra++;
          
                                                                 
                                                   
-if(feel[0]==red){pitchs=0;}; 
-if(feel[0]==blue){pitchs=1;};  
-if(feel[0]==green){pitchs=2;};   
-if(feel[0]==grey){pitchs=3;};      
+  
                                      
                                                    
                                                                 
@@ -154,7 +151,10 @@ function init() {
         
     
         setInterval(function(){ counter+=10; 
-
+if(feel[0]==red){pitchs=0;}; 
+if(feel[0]==blue){pitchs=1;};  
+if(feel[0]==green){pitchs=2;};   
+if(feel[0]==grey){pitchs=3;};    
 ctx.clearRect(0,0,window.innerWidth,window.innerWidth);
 
 ctx.beginPath();
