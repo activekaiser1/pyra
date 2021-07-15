@@ -124,9 +124,10 @@ countttra++;
          
                                                                 
                                                   
-  if(feel[0]==red){pz=1;};                                                              
-                                     
-                                                   
+  if(feel[0]==red){pz=0;};                                                              
+   if(feel[0]==blue){pz=1;};                                     
+   if(feel[0]==green){pz=2;}; 
+   if(feel[0]==grey){pz=3;};                                                                  
                                                                 
  document.ontouchmove = function(event){
     event.preventDefault();
@@ -267,22 +268,22 @@ fell.unshift("white"); fell.unshift("white"); fell.unshift("white"); fell.unshif
                                                                                     
                                                                                         
 if(fell[36+12] == nom){fell[0]=fell[36+12]
-source[0].detune.value = 100;
+source[pz].detune.value = 0;
 }; 
 if(fell[37+12] == nom){fell[1]=fell[37+12]
-source[0].detune.value = 200;
+source[pz].detune.value = 100;
 }; 
 if(fell[38+12] == nom){fell[2]=fell[38+12]
-source[0].detune.value = 300;
+source[pz].detune.value = 200;
 }; 
 if(fell[39+12] == nom){fell[3]=fell[39+12]
-source[0].detune.value = 400;
+source[pz].detune.value = 300;
 }; 
 if(fell[40+12] == nom){fell[4]=fell[40+12]
-source[0].detune.value = 500;
+source[pz].detune.value = 400;
 }; 
 if(fell[41+12] == nom){fell[5]=fell[41+12]
-source[0].detune.value = 600;
+source[pz].detune.value = 500;
 };  
 if(fell[42+12] == nom){fell[6]=fell[42+12]
 source[0].detune.value = 700;
