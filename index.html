@@ -37,7 +37,7 @@ var countra = 0;
 var counttra = 0;
 var countttra = 0;
 var countfour = 0;     
-var pz = 0;
+var pz = -1;
                                         
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
@@ -124,10 +124,10 @@ countttra++;
          
                                                                 
                                                   
-  if(feel[0]==red){pz=0;};                                                              
-   if(feel[0]==blue){pz=1;};                                     
-   if(feel[0]==green){pz=2;}; 
-   if(feel[0]==grey){pz=3;};                                                                  
+  if(nom==red){pz=0;};                                                              
+   if(nom==blue){pz=1;};                                     
+   if(nom==green){pz=2;}; 
+   if(nom==grey){pz=3;};                                                                  
                                                                 
  document.ontouchmove = function(event){
     event.preventDefault();
