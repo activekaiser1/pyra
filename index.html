@@ -125,10 +125,7 @@ countttra++;
          
                                                                 
                                                   
-  if(feel[0]=="red"){pz=0;};                                                              
-   if(feel[0]=="blue"){pz=1;};                                     
-   if(feel[0]=="green"){pz=2;}; 
-   if(feel[0]=="grey"){pz=3;};                                                                  
+                                                               
                                                                 
  document.ontouchmove = function(event){
     event.preventDefault();
@@ -269,7 +266,10 @@ fell.unshift("white"); fell.unshift("white"); fell.unshift("white"); fell.unshif
                                                                            };
                                                                            
                                                    
-                                                                                    
+                                 if(feel[0]=="red"){pz=0;};                                                              
+   if(feel[0]=="blue"){pz=1;};                                     
+   if(feel[0]=="green"){pz=2;}; 
+   if(feel[0]=="grey"){pz=3;};                                                        
                                                                                         
 if(fell[36+12] == nom){fell[0]=fell[36+12]
 source[pz].detune.value = 0;
