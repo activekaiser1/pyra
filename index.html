@@ -37,7 +37,7 @@ var countra = 0;
 var counttra = 0;
 var countttra = 0;
 var countfour = 0;     
-
+var pitchs = 0;
                                         
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
@@ -124,7 +124,10 @@ countttra++;
          
                                                                 
                                                   
-                                                                
+if(feel[0]==red){pitchs=0;}; 
+if(feel[0]==blue){pitchs=1;};  
+if(feel[0]==green){pitchs=2;};   
+if(feel[0]==grey){pitchs=3;};      
                                      
                                                    
                                                                 
@@ -267,40 +270,40 @@ fell.unshift("white"); fell.unshift("white"); fell.unshift("white"); fell.unshif
                                                                                     
                                                                                         
 if(fell[36+12] == nom){fell[0]=fell[36+12]
-source[0].detune.value = 100;
+source[pitchs].detune.value = 0;
 }; 
 if(fell[37+12] == nom){fell[1]=fell[37+12]
-source[0].detune.value = 200;
+source[pitchs].detune.value = 100;
 }; 
 if(fell[38+12] == nom){fell[2]=fell[38+12]
-source[0].detune.value = 300;
+source[pitchs].detune.value = 200;
 }; 
 if(fell[39+12] == nom){fell[3]=fell[39+12]
-source[0].detune.value = 400;
+source[pitchs].detune.value = 300;
 }; 
 if(fell[40+12] == nom){fell[4]=fell[40+12]
-source[0].detune.value = 500;
+source[pitchs].detune.value = 400;
 }; 
 if(fell[41+12] == nom){fell[5]=fell[41+12]
-source[0].detune.value = 600;
+source[pitchs].detune.value = 500;
 };  
 if(fell[42+12] == nom){fell[6]=fell[42+12]
-source[0].detune.value = 700;
+source[pitchs].detune.value = 600;
 };  
 if(fell[43+12] == nom){fell[7]=fell[43+12]
-source[0].detune.value = 800;
+source[pitchs].detune.value = 700;
 };  
 if(fell[44+12] == nom){fell[8]=fell[44+12]
-source[0].detune.value = 900;
+source[pitchs].detune.value = 800;
 };  
 if(fell[45+12] == nom){fell[9]=fell[45+12]
-source[0].detune.value = 1000;
+source[pitchs].detune.value = 900;
 };  
 if(fell[46+12] == nom){fell[10]=fell[46+12]
-source[0].detune.value = 1100;
+source[pitchs].detune.value = 1000;
 };  
 if(fell[47+12] == nom){fell[11]=fell[47+12]
-source[0].detune.value = 1200;
+source[pitchs].detune.value = 1100;
 };  
                                                                                    
                                                                                     
