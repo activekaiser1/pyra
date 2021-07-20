@@ -62,6 +62,7 @@ cc.style.top = window.innerHeight/2 - window.innerWidth/2 + "px";
 
                                                                 
 var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+var bufferLike = [];
 var source = [];
 var gainNode= [];
 var daya = ["https://archive.org/download/loyalteesigsnare/LoyalteesigSnare.wav",
