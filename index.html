@@ -29,6 +29,8 @@ body, html { width:100%;    touch-action: manipulation; }
                      </style>
 
 <script>
+var coon = 0;    
+var buel = 0;                     
 var fell = ["white","white","white","white","white","white","white","white","white","white","white","white","white","white"];                       
 var feel = ["white","white","white","white"];
 
@@ -154,8 +156,20 @@ function init() {
         
         
     
-        setInterval(function(){ counter+=xped; 
-
+        setInterval(function(){ 
+                                                               
+counter+=xped; 
+coon++;
+  buell++;                                                             
+ 
+ source[coon] = audioCtx.createBufferSource();
+  source[coon].buffer = bufferLike[buel];
+  source[coon].connect(audioCtx.destination);
+  source[coon].loop = false;
+  source[coon].start();     
+                                                               
+   if(buel==4){buel=0;};                                                            
+                                                               
 ctx.clearRect(0,0,window.innerWidth,window.innerWidth);
 
 ctx.beginPath();
@@ -275,83 +289,83 @@ fell.unshift("white"); fell.unshift("white"); fell.unshift("white"); fell.unshif
                                                                                         
 if(fell[36+12] == nom){fell[0]=fell[36+12];
 
-if(nom=="red"){source[0].detune.value = 0;};
-if(nom=="blue"){source[1].detune.value = 0;};
-if(nom=="green"){source[2].detune.value = 0;};
-if(nom=="grey"){source[3].detune.value = 0;};              
+if(nom=="red"){source[coon].detune.value = 0;};
+if(nom=="blue"){source[coon+1].detune.value = 0;};
+if(nom=="green"){source[coon+2].detune.value = 0;};
+if(nom=="grey"){source[coon+3].detune.value = 0;};              
 
                
 }; 
 if(fell[37+12] == nom){fell[1]=fell[37+12];
               
-if(nom=="red"){source[0].detune.value = 100;};
-if(nom=="blue"){source[1].detune.value = 100;};
-if(nom=="green"){source[2].detune.value = 100;};
-if(nom=="grey"){source[3].detune.value = 100;}; 
+if(nom=="red"){source[coon].detune.value = 100;};
+if(nom=="blue"){source[coon+1].detune.value = 100;};
+if(nom=="green"){source[coon+2].detune.value = 100;};
+if(nom=="grey"){source[coon+3].detune.value = 100;}; 
               
 }; 
               
 if(fell[38+12] == nom){fell[2]=fell[38+12];
-if(nom=="red"){source[0].detune.value = 200;};
-if(nom=="blue"){source[1].detune.value = 200;};
-if(nom=="green"){source[2].detune.value = 200;};
-if(nom=="grey"){source[3].detune.value = 200;}; 
+if(nom=="red"){source[coon].detune.value = 200;};
+if(nom=="blue"){source[coon+1].detune.value = 200;};
+if(nom=="green"){source[coon+2].detune.value = 200;};
+if(nom=="grey"){source[coon+3].detune.value = 200;}; 
               
               
 }; 
 if(fell[39+12] == nom){fell[3]=fell[39+12];
-if(nom=="red"){source[0].detune.value = 300;};
-if(nom=="blue"){source[1].detune.value = 300;};
-if(nom=="green"){source[2].detune.value = 300;};
-if(nom=="grey"){source[3].detune.value = 300;}; 
+if(nom=="red"){source[coon].detune.value = 300;};
+if(nom=="blue"){source[coon+1].detune.value = 300;};
+if(nom=="green"){source[coon+2].detune.value = 300;};
+if(nom=="grey"){source[coon+3].detune.value = 300;}; 
 }; 
 if(fell[40+12] == nom){fell[4]=fell[40+12];
-if(nom=="red"){source[0].detune.value = 400;};
-if(nom=="blue"){source[1].detune.value = 400;};
-if(nom=="green"){source[2].detune.value = 400;};
-if(nom=="grey"){source[3].detune.value = 400;}; 
+if(nom=="red"){source[coon].detune.value = 400;};
+if(nom=="blue"){source[coon+1].detune.value = 400;};
+if(nom=="green"){source[coon+2].detune.value = 400;};
+if(nom=="grey"){source[coon+3].detune.value = 400;}; 
 }; 
 if(fell[41+12] == nom){fell[5]=fell[41+12];
-if(nom=="red"){source[0].detune.value = 500;};
-if(nom=="blue"){source[1].detune.value = 500;};
-if(nom=="green"){source[2].detune.value = 500;};
-if(nom=="grey"){source[3].detune.value = 500;}; 
+if(nom=="red"){source[coon].detune.value = 500;};
+if(nom=="blue"){source[coon+1].detune.value = 500;};
+if(nom=="green"){source[coon+2].detune.value = 500;};
+if(nom=="grey"){source[coon+3].detune.value = 500;}; 
 };  
 if(fell[42+12] == nom){fell[6]=fell[42+12];
-if(nom=="red"){source[0].detune.value = 600;};
-if(nom=="blue"){source[1].detune.value = 600;};
-if(nom=="green"){source[2].detune.value = 600;};
-if(nom=="grey"){source[3].detune.value = 600;}; 
+if(nom=="red"){source[coon].detune.value = 600;};
+if(nom=="blue"){source[coon+1].detune.value = 600;};
+if(nom=="green"){source[coon+2].detune.value = 600;};
+if(nom=="grey"){source[coon+3].detune.value = 600;}; 
 };  
 if(fell[43+12] == nom){fell[7]=fell[43+12];
-if(nom=="red"){source[0].detune.value = 700;};
-if(nom=="blue"){source[1].detune.value = 700;};
-if(nom=="green"){source[2].detune.value = 700;};
-if(nom=="grey"){source[3].detune.value = 700;}; 
+if(nom=="red"){source[coon].detune.value = 700;};
+if(nom=="blue"){source[coon+1].detune.value = 700;};
+if(nom=="green"){source[coon+2].detune.value = 700;};
+if(nom=="grey"){source[coon+3].detune.value = 700;}; 
 };  
 if(fell[44+12] == nom){fell[8]=fell[44+12];
-if(nom=="red"){source[0].detune.value = 800;};
-if(nom=="blue"){source[1].detune.value = 800;};
-if(nom=="green"){source[2].detune.value = 800;};
-if(nom=="grey"){source[3].detune.value = 800;}; 
+if(nom=="red"){source[coon].detune.value = 800;};
+if(nom=="blue"){source[coon+1].detune.value = 800;};
+if(nom=="green"){source[coon+2].detune.value = 800;};
+if(nom=="grey"){source[coon+3].detune.value = 800;}; 
 };  
 if(fell[45+12] == nom){fell[9]=fell[45+12];
-if(nom=="red"){source[0].detune.value = 900;};
-if(nom=="blue"){source[1].detune.value = 900;};
-if(nom=="green"){source[2].detune.value = 900;};
-if(nom=="grey"){source[3].detune.value = 900;}; 
+if(nom=="red"){source[coon].detune.value = 900;};
+if(nom=="blue"){source[coon+1].detune.value = 900;};
+if(nom=="green"){source[coon+2].detune.value = 900;};
+if(nom=="grey"){source[coon+3].detune.value = 900;}; 
 };  
 if(fell[46+12] == nom){fell[10]=fell[46+12];
-if(nom=="red"){source[0].detune.value = 1000;};
-if(nom=="blue"){source[1].detune.value = 1000;};
-if(nom=="green"){source[2].detune.value = 1000;};
-if(nom=="grey"){source[3].detune.value = 1000;}; 
+if(nom=="red"){source[coon].detune.value = 1000;};
+if(nom=="blue"){source[coon+1].detune.value = 1000;};
+if(nom=="green"){source[coon+2].detune.value = 1000;};
+if(nom=="grey"){source[coon+3].detune.value = 1000;}; 
 };  
 if(fell[47+12] == nom){fell[11]=fell[47+12];
-if(nom=="red"){source[0].detune.value = 1200;};
-if(nom=="blue"){source[1].detune.value = 1200;};
-if(nom=="green"){source[2].detune.value = 1200;};
-if(nom=="grey"){source[3].detune.value = 1200;}; 
+if(nom=="red"){source[coon].detune.value = 1200;};
+if(nom=="blue"){source[coon+1].detune.value = 1200;};
+if(nom=="green"){source[coon+2].detune.value = 1200;};
+if(nom=="grey"){source[coon+3].detune.value = 1200;}; 
 };  
                                                                                    
                                                                                     
@@ -364,19 +378,19 @@ if(nom=="grey"){source[3].detune.value = 1200;};
                                                                                    
                                                                                     
                                                       if(feel[4]=="red"){
-                       source[0].start(0);
+                       source[coon].start(0);
                                                    };  
                                                    
                                                        if(feel[4]=="blue"){
-                        source[1].start(0);
+                        source[coon+1].start(0);
                                                     };  
                                                    
                                                        if(feel[4]=="green"){
-                      source[2].start(0);
+                      source[coon+2].start(0);
                                                    };  
                                                    
                                                        if(feel[4]=="grey"){
-                      source[3].start(0);
+                      source[coon+3].start(0);
                                                    };  
                                                                                     
                                                                                     };  
