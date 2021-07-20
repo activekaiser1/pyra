@@ -47,7 +47,7 @@ var counterr = 0;
 var countra = 0;
 var counttra = 0;
 var countttra = 0;
-   
+ var yulugy = 0;  
 var pz = -1;
 var xped = 5;                                        
 var c = document.getElementById("myCanvas");
@@ -273,11 +273,15 @@ ctx.fill();
 if(counter>(window.innerWidth/3).toFixed(0)){
             counter=0;                                                          
 counterr++;      
-
+yulugy++;
                                                            
 feel.unshift("white");  
 
-                                 
+               source[yulugy] = audioCtx.createBufferSource();
+  source[yulugy].buffer = bufferLike[1];
+  source[yulugy].connect(audioCtx.destination);
+  source[yulugy].loop = false;
+                     
                                                            
 
                     
@@ -384,19 +388,19 @@ if(nom=="grey"){source[coon].detune.value = 1200;};
                                                                                    
                                                                                     
                                                       if(feel[4]=="red"){
-                       source[coon].start(0);
+                       source[yulugy].start(0);
                                                    };  
                                                    
                                                        if(feel[4]=="blue"){
-                        source[coon].start(0);
+                        //source[yulugy].start(0);
                                                     };  
                                                    
                                                        if(feel[4]=="green"){
-                      source[coon].start(0);
+                      //source[yulugy].start(0);
                                                    };  
                                                    
                                                        if(feel[4]=="grey"){
-                      source[coon].start(0);
+                     //source[yulugy].start(0);
                                                    };  
                                                                                     
                                                                                     };  
@@ -419,6 +423,9 @@ if(nom=="grey"){source[coon].detune.value = 1200;};
 
    function deviceOrientationHandler(tiltLR, tiltFB, dir) {
 
+                                                                        
+                                                                         
+                                                                         
         ctxx.clearRect(0,0,window.innerWidth,window.innerHeight);
         ctxx.fillStyle = "black";
         ctxx.fillRect(window.innerWidth/2-5-tiltLR*20, window.innerWidth/2-5-tiltFB*20, 10, 10);
