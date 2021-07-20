@@ -171,6 +171,22 @@ coon++;
   source[coon].connect(audioCtx.destination);
   source[coon].loop = false;
   
+           
+    source[coon+1] = audioCtx.createBufferSource();
+  source[coon+1].buffer = bufferLike[0];
+  source[coon+1].connect(audioCtx.destination);
+  source[coon+1].loop = false;    
+                                                               
+         source[coon+2] = audioCtx.createBufferSource();
+  source[coon+2].buffer = bufferLike[0];
+  source[coon+2].connect(audioCtx.destination);
+  source[coon+2].loop = false;       
+                                                               
+               source[coon+3] = audioCtx.createBufferSource();
+  source[coon+3].buffer = bufferLike[0];
+  source[coon+3].connect(audioCtx.destination);
+  source[coon+3].loop = false;                                                 
+                                                               
                                                                
    if(buel==3){buel=0;};                                                            
                                                                
