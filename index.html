@@ -162,7 +162,7 @@ function init() {
     
         setInterval(function(){ 
                                                                
-counter+=xped; 
+counter++; 
 coon++;
   buel++;                                                             
  
@@ -170,7 +170,7 @@ coon++;
   source[coon].buffer = bufferLike[0];
   source[coon].connect(audioCtx.destination);
   source[coon].loop = false;
-  source[coon].start();     
+  
                                                                
    if(buel==3){buel=0;};                                                            
                                                                
