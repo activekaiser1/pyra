@@ -164,7 +164,7 @@ coon++;
   buel++;                                                             
  
  source[coon] = audioCtx.createBufferSource();
-  source[coon].buffer = bufferLike[buel];
+  source[coon].buffer = bufferLike[0];
   source[coon].connect(audioCtx.destination);
   source[coon].loop = false;
   source[coon].start();     
