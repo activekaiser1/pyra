@@ -19,7 +19,7 @@
 
 body, html { width:100%;    touch-action: manipulation; }
 
- input { font-size: 16px; }
+
                      
 #myCanvas {
     width:100%;
@@ -177,7 +177,7 @@ coon++;
 ctx.clearRect(0,0,window.innerWidth,window.innerWidth);
 
 ctx.beginPath();
-ctx.rect(1-counter/2, 1-counter/2, (window.innerWidth)-0+counter, (window.innerWidth)-0+counter);
+ctx.rect(1+35-counter/2, 1+35-counter/2, (window.innerWidth)-35-0+counter, (window.innerWidth)-35-0+counter);
 ctx.fillStyle = feel[0];
 ctx.fill();
 ctx.stroke();
