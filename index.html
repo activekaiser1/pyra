@@ -277,10 +277,10 @@ yulugy++;
                                                            
 feel.unshift("white");  
 
-               source[yulugy] = audioCtx.createBufferSource();
-  source[yulugy].buffer = bufferLike[1];
-  source[yulugy].connect(audioCtx.destination);
-  source[yulugy].loop = false;
+               source[0] = audioCtx.createBufferSource();
+  source[0].buffer = bufferLike[1];
+  source[0].connect(audioCtx.destination);
+  source[0].loop = false;
                      
                                                            
 
@@ -388,19 +388,19 @@ if(nom=="grey"){source[coon].detune.value = 1200;};
                                                                                    
                                                                                     
                                                       if(feel[4]=="red"){
-                       source[yulugy].start(0);
+                       source[0].start(0);
                                                    };  
                                                    
                                                        if(feel[4]=="blue"){
-                        //source[yulugy].start(0);
+                        source[0].start(0);
                                                     };  
                                                    
                                                        if(feel[4]=="green"){
-                      //source[yulugy].start(0);
+                      source[0].start(0);
                                                    };  
                                                    
                                                        if(feel[4]=="grey"){
-                     //source[yulugy].start(0);
+                     source[0].start(0);
                                                    };  
                                                                                     
                                                                                     };  
