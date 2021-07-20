@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html>
 <body>
-    <input type="number" id="bpm" value="140" min="0" max="280" style="z-index:1;position:absolute;width:25px;height:25px;">
+    <input type="number" id="bpm" value="140" min="0" max="280" style="z-index:1;position:absolute;width:25px;height:25px;touch-action: manipulation;">
  
-   <button onclick="steep()" style="position:absolute;width:100px;height:100px;left:25px">stepedit</button> 
-    <button onclick="keey()" style="z-index:10;position:absolute;width:100px;height:100px;left:125px">keyboard</button>
-    <button onclick="doouble()" style="position:absolute;width:100px;height:100px;left:225px">double</button>
+   <button onclick="steep()" style="position:absolute;width:100px;height:100px;left:25px;touch-action: manipulation;">stepedit</button> 
+    <button onclick="keey()" style="z-index:10;position:absolute;width:100px;height:100px;left:125px;touch-action: manipulation;">keyboard</button>
+    <button onclick="doouble()" style="position:absolute;width:100px;height:100px;left:225px;touch-action: manipulation;">double</button>
       
 
 <canvas id="myCanvas"></canvas>
 <canvas id="myCanva""></canvas>
 <style>
+     * {
+      touch-action: manipulation;
+  }                  
                      * { margin: 0; padding: 0;}
 
-body, html { width:100%; }
+body, html { width:100%;    touch-action: manipulation; }
 
 #myCanvas {
     width:100%;
+                         touch-action: manipulation;
 }
       #myCanva {
     width:100%;
+                         touch-action: manipulation;
 }
                      </style>
 
