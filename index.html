@@ -429,10 +429,10 @@ if(nom=="grey"){source[coon].detune.value = 1200;};
             if(window.innerWidth/2-5-tiltLR*20<0){
               if(window.innerWidth/2-5-tiltFB*20>0){                   
                    if(window.innerWidth/2-5-tiltFB*20<window.innerWidth){               
-
+source[coon].start(0);  
 feel[0]="red";
 nom = feel[0];
-source[coon].start(0);   
+ 
 //gainNode[0].gain.value = (Math.abs(window.innerWidth/2-5-tiltLR*20))/100;
                         
 };};};
@@ -440,10 +440,10 @@ source[coon].start(0);
             if(window.innerWidth/2-5-tiltFB*20<0){
               if(window.innerWidth/2-5-tiltLR*20>0){
               if(window.innerWidth/2-5-tiltLR*20<window.innerWidth){
-
+source[coon].start(0); 
 feel[0]="blue";
 nom = feel[0];
-source[coon].start(0); 
+
 //gainNode[1].gain.value = (Math.abs(window.innerWidth/2-5-tiltFB*20))/100;               
               
 };};};
@@ -452,10 +452,10 @@ source[coon].start(0);
             if(window.innerWidth/2-5-tiltLR*20>window.innerWidth){
                if(window.innerWidth/2-5-tiltFB*20>0){                   
                    if(window.innerWidth/2-5-tiltFB*20<window.innerWidth){    
-              
+ source[coon].start(0);             
 feel[0]="green";
 nom = feel[0];
-source[coon].start(0);
+
 //gainNode[2].gain.value = (window.innerWidth/2-5-tiltLR*20-window.innerWidth)/100;                  
                
 };};};
@@ -463,10 +463,10 @@ source[coon].start(0);
             if(window.innerWidth/2-5-tiltFB*20>window.innerWidth){
                  if(window.innerWidth/2-5-tiltLR*20>0){
               if(window.innerWidth/2-5-tiltLR*20<window.innerWidth){
-
+source[coon].start(0); 
 feel[0]="grey";  
 nom = feel[0];
-source[coon].start(0); 
+
 //gainNode[3].gain.value = (window.innerWidth/2-5-tiltFB*20-window.innerWidth)/100;              
 
 };};};
